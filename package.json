@@ -1,0 +1,21 @@
+{
+  "name": "ai-detection-app",
+  "version": "1.0.0",
+  "description": "Full-stack AI-powered web application for human body part detection and facial recognition",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:ai\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ai": "cd ai-service && python app.py",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../ai-service && pip install -r requirements.txt",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": ["ai", "detection", "mern", "tensorflow", "mediapipe"],
+  "author": "AI Detection Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
